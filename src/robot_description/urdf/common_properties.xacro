@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="kgmm2_to_kgm2" value="1e-6" />
+
+    <material name="red">
+        <color rgba="0.65 0.0 0.0 1.0" />
+    </material>
+    
+    <material name="blue">
+        <color rgba="0.0 0.0 0.65 1.0" />
+    </material>
+
+    <material name="black">
+        <color rgba ="0.1 0.1 0.1 1.0" />
+    </material>
+
+    <material name="silver">
+        <color rgba="0.75 0.75 0.75 1.0" />
+    </material>
+
+    <material name="gray">
+        <color rgba="0.5 0.5 0.5 1.0" />
+    </material>
+
+    <xacro:macro name="base_inertia" params="xyz rpy">
+        <inertial>
+            <origin xyz="${xyz}" rpy="${rpy}" />
+            <mass value="0.324" />
+            <inertia ixx="${kgmm2_to_kgm2*1321.81}" ixy="${kgmm2_to_kgm2*(-1.06e-4)}" 
+                    ixz="0" iyy="${kgmm2_to_kgm2*963.45}" 
+                    iyz="0" izz="${kgmm2_to_kgm2*1640.97}" />
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="motor_inertia" params="xyz rpy">
+        <inertial>
+            <origin xyz="${xyz}" rpy="${rpy}" />
+            <mass value="0.016" />
+            <inertia ixx="${kgmm2_to_kgm2*0.67}" ixy="${kgmm2_to_kgm2*(-1.41e-7)}" 
+                    ixz="${kgmm2_to_kgm2*(-0.022)}" iyy="${kgmm2_to_kgm2*1.43}" 
+                    iyz="${kgmm2_to_kgm2*(-1.12e-4)}" izz="${kgmm2_to_kgm2*1.651}" />
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="wheel_inertia" params="xyz rpy">
+        <inertial>
+            <origin xyz="${xyz}" rpy="${rpy}" />
+            <mass value="0.023" />
+            <inertia ixx="${kgmm2_to_kgm2*19.31}" ixy="${kgmm2_to_kgm2*(-2.91e-8)}" 
+                    ixz="${kgmm2_to_kgm2*(-4.18e-8)}" iyy="${kgmm2_to_kgm2*9.80}" 
+                    iyz="${kgmm2_to_kgm2*(4.49e-7)}" izz="${kgmm2_to_kgm2*9.81}" />
+        </inertial>    
+    </xacro:macro>
+
+    <xacro:macro name="camera_inertia" params="xyz rpy">
+        <inertial>
+            <origin xyz="${xyz}" rpy="${rpy}" />
+            <mass value="0.04" />
+            <inertia ixx="${kgmm2_to_kgm2*3.04}" ixy="${kgmm2_to_kgm2*0.004}" 
+                    ixz="${kgmm2_to_kgm2*(1.31e-4)}" iyy="${kgmm2_to_kgm2*32.45}" 
+                    iyz="${kgmm2_to_kgm2*(-0.017)}" izz="${kgmm2_to_kgm2*32.46}" />
+        </inertial>    
+    </xacro:macro>
+
+
+    <xacro:macro name="lidar_inertia" params="xyz rpy">
+        <inertial>
+            <origin xyz="${xyz}" rpy="${rpy}" />
+            <mass value="0.152" />
+            <inertia ixx="${kgmm2_to_kgm2*98.88}" ixy="${kgmm2_to_kgm2*0.453}" 
+                    ixz="${kgmm2_to_kgm2*(-0.779)}" iyy="${kgmm2_to_kgm2*62.04}" 
+                    iyz="${kgmm2_to_kgm2*(-13.95)}" izz="${kgmm2_to_kgm2*123.1}" />
+        </inertial>    
+    </xacro:macro>
+
+
+</robot>
