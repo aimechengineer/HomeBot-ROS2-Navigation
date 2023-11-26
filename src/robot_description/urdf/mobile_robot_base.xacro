@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+    <!-- The 'scale_num' and 'scale' properties are used to adjust the size of the robot's visual and collision meshes within the simulation environment. 
+     This is particularly useful for visualizing the transform frames (TFs) more clearly during development and debugging. 
+     The default scale is set to 1.0, which represents the actual size of the robot. It can be adjusted as necessary for better visibility. -->
+
     <xacro:property name="scale_num" value="1.0" />
     <xacro:property name="scale" value="${scale_num} ${scale_num} ${scale_num}" />
 
