@@ -1,6 +1,8 @@
 # HomeBot-ROS2-Navigation
 HomeBot-ROS2-Navigation: A ROS2-powered robotic platform for autonomous indoor navigation and mapping.
 
+![HomeBot Image](slam.gif) 
+
 ## Project Overview
 This repository contains a suite of ROS2 packages for the HomeBot, an autonomous robot designed for indoor navigation and mapping. The provided image showcases the HomeBot's physical design, which the following packages bring to life:
 
@@ -11,6 +13,8 @@ This repository contains a suite of ROS2 packages for the HomeBot, an autonomous
 These packages represent the core components of the HomeBot's functionality, demonstrating practical applications of ROS2 in robotic indoor navigation.
 
 ![HomeBot Image](slam.gif)  // Replace with the actual URL to the image hosted on GitHub or another image hosting service.
+
+![HomeBot Image](slam.gif) 
 
 
 ## Getting Started
