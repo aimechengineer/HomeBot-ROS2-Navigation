@@ -12,14 +12,15 @@ This repository contains a suite of ROS2 packages for the HomeBot, an autonomous
 
 These packages represent the core components of the HomeBot's functionality, demonstrating practical applications of ROS2 in robotic indoor navigation.
 
-
 ## Getting Started
 ### Prerequisites
   *ROS2 (tested with ROS2 Humble)*
   
   *Python 3.10*
 
-  Nav2
+  *Nav2 [Github](https://github.com/ros-planning/navigation2) and [Documentation](https://navigation.ros.org/)*
+  
+  *Slam_toolbox [Github](https://github.com/SteveMacenski/slam_toolbox)*
     
 ## Installation
 
