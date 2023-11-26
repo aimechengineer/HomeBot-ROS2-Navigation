@@ -11,3 +11,33 @@ This repository contains a suite of ROS2 packages for the HomeBot, an autonomous
 These packages represent the core components of the HomeBot's functionality, demonstrating practical applications of ROS2 in robotic indoor navigation.
 
 ![HomeBot Image](image-url-here)  // Replace with the actual URL to the image hosted on GitHub or another image hosting service.
+
+
+## Getting Started
+### Prerequisites
+  *ROS2 (tested with ROS2 Humble)*
+  
+  *Python 3.10*
+
+  Nav2
+    
+## Installation
+
+1. Create a ROS 2 workspace (if one does not already exist):
+   ```sh
+   mkdir -p ~/my_robot_ws
+   cd ~/my_robot_ws
+2. Clone this repository into your workspace:
+   ```sh
+   git clone https://github.com/aimechengineer/HomeBot-ROS2-Navigation.git
+3. Install any dependencies using rosdep:
+   ```sh
+   rosdep install --from-paths src --ignore-src -r -y
+5. Build the workspace:
+   ```sh
+   colcon build --symlink-install
+7. Source the setup script:
+   ```sh
+   source ~/my_robot_ws/install/setup.bash
+   
+## Usage
