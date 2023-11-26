@@ -14,13 +14,13 @@ These packages represent the core components of the HomeBot's functionality, dem
 
 ## Getting Started
 ### Prerequisites
-  *ROS2 (tested with ROS2 Humble)*
+  *ROS2 (tested with ROS2 Humble)* - [Documentation](https://docs.ros.org/en/humble/index.html)
   
   *Python 3.10*
 
-  *Nav2 [Github](https://github.com/ros-planning/navigation2) and [Documentation](https://navigation.ros.org/)*
+  *Nav2* - [Github](https://github.com/ros-planning/navigation2) and [Documentation](https://docs.ros.org/en/humble/index.html)
   
-  *Slam_toolbox [Github](https://github.com/SteveMacenski/slam_toolbox)*
+  *Slam_toolbox* - [Github](https://github.com/SteveMacenski/slam_toolbox)
     
 ## Installation
 
