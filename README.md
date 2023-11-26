@@ -10,7 +10,7 @@ This repository contains a suite of ROS2 packages for the HomeBot, an autonomous
 
 These packages represent the core components of the HomeBot's functionality, demonstrating practical applications of ROS2 in robotic indoor navigation.
 
-![HomeBot Image](image-url-here)  // Replace with the actual URL to the image hosted on GitHub or another image hosting service.
+![HomeBot Image]([image-url-here](https://github.com/aimechengineer/HomeBot-ROS2-Navigation/blob/main/slam.gif))  // Replace with the actual URL to the image hosted on GitHub or another image hosting service.
 
 
 ## Getting Started
