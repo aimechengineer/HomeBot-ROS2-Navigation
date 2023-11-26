@@ -39,8 +39,21 @@ These packages represent the core components of the HomeBot's functionality, dem
    colcon build --symlink-install
 7. Source the setup script:
    ```sh
-   source ~/my_robot_ws/install/setup.bash
+   source ~/your_workspace-name/install/setup.bash
    
 ## Usage
+### robot_description
+Display HomeBot in RViz:
+
+    ros2 launch robot_description display.launch.xml
+    
+
+
+Display HomeBot in Gazebo and Rviz:
+
+    ros2 launch robot_description gazebo.launch.xml
+
+
+### robot_simulation and robot_patrol
 ![HomeBot Image](slam.gif)  
 ![HomeBot Image](navigation.gif) 
