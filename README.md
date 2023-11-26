@@ -14,46 +14,81 @@ These packages represent the core components of the HomeBot's functionality, dem
 
 ## Getting Started
 ### Prerequisites
-  *ROS2 (tested with ROS2 Humble)* - [Documentation](https://docs.ros.org/en/humble/index.html)
+  **ROS2 (tested with ROS2 Humble)** - [Documentation](https://docs.ros.org/en/humble/index.html)
   
-  *Python 3.10*
+  **Python 3.10**
 
-  *Nav2* - [Github](https://github.com/ros-planning/navigation2) and [Documentation](https://docs.ros.org/en/humble/index.html)
+  **Nav2** - [Github](https://github.com/ros-planning/navigation2) and [Documentation](https://docs.ros.org/en/humble/index.html)
   
-  *Slam_toolbox* - [Github](https://github.com/SteveMacenski/slam_toolbox)
+  **Slam_toolbox** - [Github](https://github.com/SteveMacenski/slam_toolbox)
     
 ## Installation
 
-1. Create a ROS 2 workspace (if one does not already exist):
+1. **Create a ROS 2 workspace (if one does not already exist):**
+   
    ```sh
    mkdir ~/your_workspace-name_ws
    cd ~/your_workspace-name_ws
-2. Clone this repository into your workspace:
+   
+3. **Clone this repository into your workspace:**
+   
    ```sh
    git clone https://github.com/aimechengineer/HomeBot-ROS2-Navigation.git
-3. Install any dependencies using rosdep:
+
+5. **Install any dependencies using rosdep:**
+
    ```sh
    rosdep install --from-paths src --ignore-src -r -y
-5. Build the workspace:
+
+6. **Build the workspace:**
    ```sh
    colcon build --symlink-install
-7. Source the setup script:
+
+7. **Source the setup script:**
    ```sh
    source ~/your_workspace-name/install/setup.bash
    
 ## Usage
 ### robot_description
-Display HomeBot in RViz:
+**Display HomeBot in RViz:**
 
     ros2 launch robot_description display.launch.xml
-    
 
-
-Display HomeBot in Gazebo and Rviz:
+**Display HomeBot in Gazebo and Rviz:**
 
     ros2 launch robot_description gazebo.launch.xml
 
-
 ### robot_simulation and robot_patrol
+#### SLAM Process
+Perform SLAM and generate a map of the environment:
+
+1. **Launch the SLAM simulation:**
+   Start the SLAM Process:
+
+       ros2 launch robot_simulation house_slam.launch.py
+       
+3. **Control HomeBot:**
+   Use teleop to manually control HomeBot during SLAM:
+   
+       ros2 run teleop_twist_keyboard teleop_twist_keyboard
+   
 ![HomeBot Image](slam.gif)  
+
+#### Autonomous Navigation
+Navigate autonomously in the environment post-SLAM:
+1. **Launch Gazebo and RViz with Nav2 Configuration**:
+   To initialize the simulation environment in Gazebo along with RViz configured for Nav2, use the following launch command:
+
+       ros2 launch robot_simulation house_sim.launch.py
+   
+3. **Start Navigation:**
+   Launch the navigation stack:
+
+       ros2 launch robot_simulation autonomous_navigation.launch.py
+
+   Once the 2D Pose Estimate is set in RViz, HomeBot can autonomously navigate the environment. Alternatively, you can start the patrol mode:
+
+       ros2 launch robot_patrol autonomous_navigation.launch.py 
+   In patrol mode, HomeBot will navigate to predefined locations autonomously.
+
 ![HomeBot Image](navigation.gif) 
