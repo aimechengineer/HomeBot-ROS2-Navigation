@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <gazebo reference="base_link">
+        <material>Gazebo/Black</material>
+        <mu1 value="0.01"/>
+        <mu2 value="0.01"/>
+    </gazebo>
+
+    <gazebo reference="left_motor_link">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="right_motor_link">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="left_wheel_link">
+        <material>Gazebo/Grey</material>
+        <mu1 value="0.1"/>
+        <mu2 value="0.1"/>
+    </gazebo>
+
+    <gazebo reference="right_wheel_link">
+        <mu1 value="0.1"/>
+        <mu2 value="0.1"/>
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+
+    <gazebo>
+        <plugin name="diff_drive_controller" filename="libgazebo_ros_diff_drive.so">
+            <!-- wheels -->
+            <left_joint>left_motor_wheel_joint</left_joint>
+            <right_joint>right_motor_wheel_joint</right_joint>
+            <!-- kinematics -->
+            <wheel_separation>${scale_num*0.057504}</wheel_separation>
+            <wheel_diameter>${0.072*scale_num}</wheel_diameter>
+            <!-- limits -->
+            <max_wheel_torque>20</max_wheel_torque>
+            <max_wheel_acceleration>1.0</max_wheel_acceleration>
+            <!-- output -->
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_footprint</robot_base_frame>
+
+            <publish_odom>true</publish_odom>
+            <publish_odom_tf>true</publish_odom_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>
+        </plugin>
+    </gazebo>
+
+</robot>
+
