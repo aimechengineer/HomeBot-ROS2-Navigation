@@ -27,8 +27,8 @@ These packages represent the core components of the HomeBot's functionality, dem
 
 1. Create a ROS 2 workspace (if one does not already exist):
    ```sh
-   mkdir -p ~/my_robot_ws
-   cd ~/my_robot_ws
+   mkdir ~/your_workspace-name_ws
+   cd ~/your_workspace-name_ws
 2. Clone this repository into your workspace:
    ```sh
    git clone https://github.com/aimechengineer/HomeBot-ROS2-Navigation.git
