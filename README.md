@@ -42,7 +42,7 @@ These packages represent the core components of the HomeBot's functionality, dem
 
 5. **Source the setup script:**
    ```sh
-   source ~/your_workspace-name/install/setup.bash
+   source ~/your_workspace-name_ws/install/setup.bash
    
 ## Usage
 ### robot_description
