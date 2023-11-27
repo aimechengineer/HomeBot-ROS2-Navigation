@@ -88,3 +88,7 @@ Navigate autonomously in the environment post-SLAM:
    In patrol mode, HomeBot will navigate to predefined locations autonomously.
 
 ![HomeBot Image](navigation.gif) 
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
