@@ -24,12 +24,10 @@ These packages represent the core components of the HomeBot's functionality, dem
     
 ## Installation
 
-## Installation
-
 1. **Create a ROS 2 workspace (if one does not already exist):**
    
    ```sh
-   mkdir -p ~/your_workspace-name_ws
+   mkdir ~/your_workspace-name_ws
    cd ~/your_workspace-name_ws
    
 2. **Clone this repository into your workspace:**
@@ -46,6 +44,26 @@ These packages represent the core components of the HomeBot's functionality, dem
    ```sh
    source ~/your_workspace-name_ws/install/setup.bash
    
+## Additional Steps for Gazebo Simulation
+If Gazebo does not launch the simulation correctly, use the following commands to set up the robot_description package in the Gazebo models directory, keeping only the meshes directory:
+
+1. **Copy the entire robot_description package to the Gazebo models directory**
+   
+   ```sh
+   cp -r path_to_robot_description_package ~/.gazebo/models/robot_description   
+Replace **path_to_robot_description_package** with the actual path to your **robot_description** package.
+
+2. **Remove all contents from the copied robot_description package except for the meshes directory**
+
+   Navigate to the robot_description directory in the Gazebo models directory:
+
+       cd ~/.gazebo/models/robot_description
+
+   Then, remove all directories except for meshes:
+
+       rm -rf !(meshes)
+   This process will ensure that only the meshes directory is retained in the robot_description package within the Gazebo models directory, which should help resolve any simulation launch issues.
+
 ## Usage
 ### robot_description
 **Display HomeBot in RViz:**
