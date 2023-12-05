@@ -10,7 +10,7 @@
   In essence, 'robot_patrol' is where the theoretical aspects of robotics meet practical application, highlighting a significant step towards autonomous, intelligent robotic systems in everyday environments.
   </description>
 
-  <maintainer email="aposporisalexander@gmail.com">aimechengineer</maintainer>
+  <maintainer email="aposporisalexander@gmail.com">Alexandros Rafael Aposporis - aimechengineer</maintainer>
   <license>MIT</license>
 
   <test_depend>ament_copyright</test_depend>

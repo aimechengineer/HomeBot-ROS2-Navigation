@@ -12,7 +12,7 @@
     simulated environment. Integration with RViz is also featured, offering real-time visualization of the robot's navigation and 
     the environment map, enhancing both the development and demonstration aspects of robotic simulations.
   </description>
-  <maintainer email="aposporisalexander@gmail.com">aimechengineer</maintainer>
+  <maintainer email="aposporisalexander@gmail.com">Alexandros Rafael Aposporis - aimechengineer</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
