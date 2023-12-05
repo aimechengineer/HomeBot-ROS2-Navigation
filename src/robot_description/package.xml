@@ -16,7 +16,7 @@
   and SLAM (Simultaneous Localization and Mapping).
   </description>
 
-  <maintainer email="aposporisalexander@gmail.com">Alexandros Rafael Aposporis - aimechengineer</maintainer>
+  <maintainer email="aposporisalexander@gmail.com">Alexandros Rafael Aposporis - aimechengineer </maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
