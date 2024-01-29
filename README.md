@@ -18,7 +18,7 @@ These packages represent the core components of the HomeBot's functionality, dem
   
   **Python 3.10**
 
-  **Nav2** - [Github](https://github.com/ros-planning/navigation2) and [Documentation](https://docs.ros.org/en/humble/index.html)
+  **Nav2** - [Github](https://github.com/ros-planning/navigation2) and [Documentation](https://navigation.ros.org/)
   
   **Slam_toolbox** - [Github](https://github.com/SteveMacenski/slam_toolbox)
     
