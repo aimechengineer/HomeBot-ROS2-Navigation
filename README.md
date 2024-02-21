@@ -104,7 +104,7 @@ Navigate autonomously in the environment post-SLAM:
 
    Once the 2D Pose Estimate is set in RViz, HomeBot can autonomously navigate the environment. Alternatively, you can start the patrol mode:
 
-       ros2 launch robot_patrol autonomous_navigation.launch.py 
+       ros2 run robot_patrol robot_patrol 
    In patrol mode, HomeBot will navigate to predefined locations autonomously.
 
 ![HomeBot Image](navigation.gif) 
